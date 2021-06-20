@@ -32,7 +32,7 @@ public class AdminAddController extends HttpServlet {
 		String admin_username = req.getParameter("admin-username"); 
 		String admin_password = req.getParameter("admin-password"); 
 		String admin_name = req.getParameter("admin-name"); 
-		Admin admin = new Admin(); 
+		Admin admin = new Admin(); // khỏi tạo đối tượng admin
 		admin.setUsername(admin_username); 
 		admin.setPassword(admin_password); 
 		admin.setName(admin_name); 
