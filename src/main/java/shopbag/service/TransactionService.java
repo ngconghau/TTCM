@@ -2,7 +2,7 @@ package shopbag.service;
 
 import java.util.List;
 
-import shopbag.model.Transactions;
+import shopbag.entities.Transactions;
 
 public interface TransactionService {
 	void insert(Transactions transaction);

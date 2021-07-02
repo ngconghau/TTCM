@@ -2,7 +2,7 @@ package shopbag.dao;
 
 import java.util.List;
 
-import shopbag.model.Review;
+import shopbag.entities.Review;
 
 public interface ReviewDao {
 	void insert(Review review);

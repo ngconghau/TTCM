@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import shopbag.dao.AdminLoginDao;
-import shopbag.model.Admin;
+import shopbag.entities.Admin;
 
 
 @WebServlet(urlPatterns = {"/admin/login"},name = "AdminLogin")

@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.Ordered;
-import shopbag.model.Product;
+import shopbag.entities.Ordered;
+import shopbag.entities.Product;
 import shopbag.service.OrderedService;
 import shopbag.service.ProductService;
 import shopbag.service.impl.OrderedServiceImpl;

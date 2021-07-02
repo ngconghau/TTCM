@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import shopbag.dao.impl.RegisterDao;
+import shopbag.entities.User;
 import shopbag.jdbc.connectDB;
-import shopbag.model.User;
 
 /**
  * Servlet implementation class RegistrationController

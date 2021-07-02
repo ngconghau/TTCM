@@ -2,7 +2,7 @@ package shopbag.dao;
  
 import java.util.List;
 
-import shopbag.model.Admin; 
+import shopbag.entities.Admin; 
  
 public interface AdminDao { 
 	void insert(Admin admin); 

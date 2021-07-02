@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.Catalog;
+import shopbag.entities.Catalog;
 import shopbag.service.CategoryService;
 import shopbag.service.impl.CategoryServicesImpl;
 

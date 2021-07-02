@@ -3,9 +3,11 @@ package shopbag.dao.impl;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Iterator;
+import java.util.List;
 
+import shopbag.entities.User;
 import shopbag.jdbc.connectDB;
-import shopbag.model.User;
 
 public class LoginDao {
 	Connection conn = null;
@@ -14,7 +16,7 @@ public class LoginDao {
 	
 	public User checkLogin(String username, String password) {
 		try {
-			String query = "select username, password from users where username = ? AND password = ?";
+			String query = "select name, email, phone from users where username = ? AND password = ?";
 			new connectDB();
 			conn = connectDB.getConnect();
 			ps = conn.prepareStatement(query);
@@ -22,7 +24,7 @@ public class LoginDao {
 			ps.setString(2, password);
 			rs = ps.executeQuery();
 			while(rs.next()) {
-				User u = new User(rs.getString(1), rs.getString(2));
+				User u = new User(rs.getString(1), rs.getString(2), rs.getString(3));
 				return u;
 			}
 			
@@ -30,6 +32,5 @@ public class LoginDao {
 			e.printStackTrace();
 		}
 		return null;
-	}
-	
+	}	
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 import shopbag.dao.ProductDao;
 import shopbag.dao.impl.ProductDaoImpl;
-import shopbag.model.Product;
+import shopbag.entities.Product;
 import shopbag.service.ProductService;
 
 public class ProductServiceImpl implements ProductService {

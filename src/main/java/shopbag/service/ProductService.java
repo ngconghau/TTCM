@@ -2,7 +2,7 @@ package shopbag.service;
 
 import java.util.List;
 
-import shopbag.model.Product;
+import shopbag.entities.Product;
 public interface ProductService {
 	void insert(Product product); // thêm product
 

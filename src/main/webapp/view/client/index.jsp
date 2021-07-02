@@ -36,7 +36,15 @@
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
+<%--                             <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a> --%>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                              
@@ -76,7 +84,14 @@
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                              	<c:choose>
@@ -115,7 +130,14 @@
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
@@ -154,7 +176,14 @@
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
@@ -232,11 +261,19 @@
                 <div class="tab-pane fade in active" id="sanphammoi">
                   <ul class="aa-product-catg aa-popular-slider">
                     <!-- start single product item -->
+<!--                     sản phẩm mới -->
                    	 <c:forEach items="${product_new}" var="product">
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
@@ -273,11 +310,19 @@
                 <div class="tab-pane fade" id="sanphambanchay">
                 	<ul class="aa-product-catg aa-popular-slider">
                     <!-- start single product item -->
+<!--                     sản phẩm bán chạy -->
                    	 <c:forEach items="${product_banchay}" var="product">
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                             	<c:choose>
@@ -315,11 +360,19 @@
                   
                   	<ul class="aa-product-catg aa-popular-slider">
                     <!-- start single product item -->
+<!--                     sản phẩm giảm giá -->
                    	 <c:forEach items="${product_sale}" var="product">
                         <li>
                           <figure>
                             <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="polo shirt img"></a>
-                            <a class="aa-add-card-btn"href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+                            <c:choose>
+	                    	<c:when test="${product.status==0 }">
+	                    	<a class="aa-add-card-btn" href=""><span class="fa fa-shopping-cart"></span>Hết hàng</a>
+	                    	</c:when>
+	                    	<c:otherwise>
+	                    	<a class="aa-add-card-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${product.id}"><span class="fa fa-shopping-cart"></span>Thêm vào giỏ hàng</a>
+	                    	</c:otherwise>
+	                    </c:choose>
                               <figcaption>
                               <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name }</a></h4>
                              	<c:choose>

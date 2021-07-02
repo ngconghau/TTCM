@@ -1,4 +1,4 @@
-package shopbag.model;
+package shopbag.entities;
 import java.util.List;
 
 public class Order {

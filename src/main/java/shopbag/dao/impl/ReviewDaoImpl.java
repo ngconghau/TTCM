@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import shopbag.dao.ReviewDao;
+import shopbag.entities.Review;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Review;
 
 public class ReviewDaoImpl extends connectDB implements ReviewDao {
 

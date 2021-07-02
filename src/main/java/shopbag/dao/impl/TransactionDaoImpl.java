@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import shopbag.dao.TransactionDao;
+import shopbag.entities.Transactions;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Transactions;
 
 public class TransactionDaoImpl extends connectDB implements TransactionDao {
 	public void insert(Transactions transaction) { 

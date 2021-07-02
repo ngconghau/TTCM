@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
-import shopbag.model.Product;
+import shopbag.entities.Product;
 import shopbag.service.ProductService;
 import shopbag.service.impl.ProductServiceImpl;
 

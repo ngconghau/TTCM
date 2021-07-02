@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import shopbag.model.Item;
-import shopbag.model.Order;
-import shopbag.model.Product;
+import shopbag.entities.Item;
+import shopbag.entities.Order;
+import shopbag.entities.Product;
 import shopbag.service.ProductService;
 import shopbag.service.impl.ProductServiceImpl;
 

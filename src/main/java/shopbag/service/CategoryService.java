@@ -2,7 +2,7 @@ package shopbag.service;
 
 import java.util.List;
 
-import shopbag.model.Catalog;
+import shopbag.entities.Catalog;
 public interface CategoryService {
 	void insert(Catalog category);
 

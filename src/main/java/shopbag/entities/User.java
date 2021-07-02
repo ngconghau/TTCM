@@ -1,4 +1,4 @@
-package shopbag.model;
+package shopbag.entities;
 
 public class User{
 	private int id;
@@ -13,6 +13,12 @@ public class User{
 		super();
 		this.username = username;
 		this.password = password;
+	}
+	public User(String name, String email, String phone) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
 	}
 	
 	public User(int id, String username, String password, String phone, String email, String name, String created) {

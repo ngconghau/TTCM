@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import shopbag.model.Item;
-import shopbag.model.Order;
+import shopbag.entities.Item;
+import shopbag.entities.Order;
 
 @WebServlet(urlPatterns = {"/view/client/cart-update"},name = "UpdateCart")
 public class UpdateCartController extends HttpServlet {

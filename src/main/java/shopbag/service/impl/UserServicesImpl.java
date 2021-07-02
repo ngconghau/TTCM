@@ -5,7 +5,7 @@ import java.util.List;
 
 import shopbag.dao.UserDao;
 import shopbag.dao.impl.UserDaoImpl;
-import shopbag.model.User;
+import shopbag.entities.User;
 import shopbag.service.UserService;
 
 public class UserServicesImpl implements UserService {

@@ -35,12 +35,13 @@
               <div class="col-md-8">
                 <div class="checkout-left">
                   <div class="panel-group" >
-                   <c:if test="${sessionScope.username == null}">
-                   		<p> Bạn cần đăng nhập để thanh toán! Đăng nhập <a href="${pageContext.request.contextPath}/view/client/login" style="color: #754110">tại đây!</a></p>
-                   </c:if>
-				 <c:if test="${sessionScope.username != null}">
-                    <!-- Shipping Address -->
-                    <div class="panel panel-default aa-checkout-billaddress">
+                  
+                <c:choose>
+    				<c:when test="${sessionScope.username == null && sessionScope.order != null}">
+    				<p> Bạn cần đăng nhập để thanh toán! Đăng nhập <a href="${pageContext.request.contextPath}/view/client/login" style="color: #754110">tại đây!</a></p>
+   					 </c:when>    
+   					 <c:when test="${sessionScope.username != null && sessionScope.order != null}">
+   					 <div class="panel panel-default aa-checkout-billaddress">
                       <div class="panel-heading">
                         <h4 class="panel-title" style="color:#754110">
                             Địa chỉ giao hàng
@@ -51,7 +52,7 @@
                          <div class="row">
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill">
-                                <input type="text" placeholder="Họ Tên*" required="required" name="transaction_name">
+                                <input type="text" placeholder="Họ Tên*" required="required" name="transaction_name" value="${sessionScope.username }">
                               </div>                             
                             </div>
                           
@@ -60,12 +61,12 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="email" placeholder="Email*" required="required" name="transaction_email">
+                                <input type="email" placeholder="Email*" required="required" name="transaction_email" value="${sessionScope.email }">
                               </div>                             
                             </div>
                             <div class="col-md-6">
                               <div class="aa-checkout-single-bill">
-                                <input type="tel" placeholder="Số điện thoại*" required="required" name="transaction_phone">
+                                <input type="tel" placeholder="Số điện thoại*" required="required" name="transaction_phone" value="${sessionScope.phone }">
                               </div>
                             </div>
                           </div> 
@@ -104,7 +105,11 @@
                         </div>
                       </div>
                     </div>
-				</c:if>
+   					 </c:when>   
+    				<c:otherwise>
+    				<p>Giỏ hàng chưa có gì vui lòng chọn sản phẩm <a href="${pageContext.request.contextPath}/view/client/product" style="color: #754110">tại đây!</a></p>
+    				</c:otherwise>
+				</c:choose>
                   </div>
                 </div>
               </div>
@@ -146,7 +151,7 @@
                   <h4>Hình thức thanh toán</h4>
                   <div class="aa-payment-method">                    
                     <label for="cashdelivery"><input type="radio" id="cashdelivery" name="transaction_payment" checked value="0"> Thanh toán khi nhận hàng (COD) </label>
-                    <label for="paypal"><input type="radio" id="paypal" name="transaction_payment" value="1" > Thanh toán bằng thể ngân hàng (ATM) </label>
+                    <label for="paypal"><input type="radio" id="paypal" name="transaction_payment" value="1" disabled > Thanh toán bằng thể ngân hàng (ATM) </label>
                     <img src="${pageContext.request.contextPath}/view/client/assets/images/paypal.jpg" border="0" alt="PayPal Acceptance Mark">    
                     <input type="submit" value="Đặt hàng" class="aa-browse-btn">
                   </div>

@@ -10,7 +10,8 @@
 <!-- catg header banner section -->
 <section id="aa-catg-head-banner">
 	<img
-		src="${pageContext.request.contextPath}/view/client/assets/images/banner/banner-tc.jpg" alt="banner sản phẩm">
+		src="${pageContext.request.contextPath}/view/client/assets/images/banner/banner-tc.jpg"
+		alt="banner sản phẩm">
 	<div class="aa-catg-head-banner-area">
 		<div class="container">
 			<div class="aa-catg-head-banner-content">
@@ -18,7 +19,8 @@
 				<ol class="breadcrumb">
 					<li><a href="${pageContext.request.contextPath}">Trang chủ</a></li>
 					<li><a
-						href="${pageContext.request.contextPath}/view/client/product">Sản phẩm</a></li>
+						href="${pageContext.request.contextPath}/view/client/product">Sản
+							phẩm</a></li>
 					<li style="color: #fff">${detail_product.name }</li>
 				</ol>
 			</div>
@@ -47,25 +49,26 @@
 													class="simpleLens-lens-image"><img
 													src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}"
 													class="simpleLens-big-image"></a>
-												</div>								
+											</div>
 										</div>
 										<div class="simpleLens-thumbnails-container">
-												<a data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}"
-													data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}"
-													class="simpleLens-thumbnail-wrapper"> 
-													<img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}">
-												</a> 
-<%-- 												<a data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg" --%>
-<%-- 													data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg" --%>
-<!-- 													class="simpleLens-thumbnail-wrapper">  -->
-<%-- 													<img src="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg"> --%>
-<!-- 												</a>  -->
-<%-- 												<a data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg" --%>
-<%-- 													data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg" --%>
-<!-- 													class="simpleLens-thumbnail-wrapper">  -->
-<%-- 													<img src="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg"> --%>
-<!-- 												</a>								 -->
-											</div>
+											<a
+												data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}"
+												data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}"
+												class="simpleLens-thumbnail-wrapper"> <img
+												src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${detail_product.image_link}">
+											</a>
+											<%-- 												<a data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg" --%>
+											<%-- 													data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg" --%>
+											<!-- 													class="simpleLens-thumbnail-wrapper">  -->
+											<%-- 													<img src="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua1.jpg"> --%>
+											<!-- 												</a>  -->
+											<%-- 												<a data-big-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg" --%>
+											<%-- 													data-lens-image="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg" --%>
+											<!-- 													class="simpleLens-thumbnail-wrapper">  -->
+											<%-- 													<img src="${pageContext.request.contextPath}/view/client/assets/images/products/cuqua2.jpg"> --%>
+											<!-- 												</a>								 -->
+										</div>
 									</div>
 								</div>
 							</div>
@@ -109,14 +112,22 @@
 										<p class="aa-prod-category">
 											<c:forEach items="${name_cate_of_product}" var="name_cate">
 												<strong>Danh mục:</strong>
-												<a href="${pageContext.request.contextPath}/view/client/product-id?id=${name_cate.id}">${name_cate.name }</a>
+												<a
+													href="${pageContext.request.contextPath}/view/client/product-id?id=${name_cate.id}">${name_cate.name }</a>
 											</c:forEach>
 										</p>
 									</div>
 									<div class="aa-prod-view-bottom">
-										<a class="aa-add-to-cart-btn"
-											href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${detail_product.id}">Thêm
-											vào giỏ hàng</a>
+										<c:choose>
+											<c:when test="${detail_product.status == 0}">
+												<a class="aa-add-to-cart-btn" href="">Hết hàng</a>
+											</c:when>
+											<c:otherwise>
+												<a class="aa-add-to-cart-btn"
+													href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${detail_product.id}">Thêm
+													vào giỏ hàng</a>
+											</c:otherwise>
+										</c:choose>								
 									</div>
 								</div>
 							</div>

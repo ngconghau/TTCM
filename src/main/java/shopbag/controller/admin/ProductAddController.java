@@ -1,22 +1,28 @@
 package shopbag.controller.admin;
 
+
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
-import shopbag.model.Catalog;
-import shopbag.model.Product;
+import shopbag.entities.Catalog;
+import shopbag.entities.Product;
 import shopbag.service.CategoryService;
 import shopbag.service.ProductService;
 import shopbag.service.impl.CategoryServicesImpl;
 import shopbag.service.impl.ProductServiceImpl;
 
+@MultipartConfig
 @WebServlet(urlPatterns = {"/admin/product/add"},name = "addProduct")
 public class ProductAddController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -44,9 +50,26 @@ public class ProductAddController extends HttpServlet {
 			String product_desc = req.getParameter("product-desc");
 			String product_content = req.getParameter("product-content");
 			String product_discount = req.getParameter("product-discount");
-			String product_image = req.getParameter("product-image");
+//			String product_image = req.getParameter("product-image");
+			Part part= req.getPart("product-image");
+			String product_image= part.getSubmittedFileName();
+			String partString = "D:/Document/Java/Learn/DTCM/src/main/webapp/view/client/assets/images/products/img-test/"+product_image;
+			try {
+				FileOutputStream fopStream= new FileOutputStream(partString);
+				InputStream iStream= part.getInputStream();
+				byte[] byt = new byte[iStream.available()];
+				iStream.read(byt);
+				fopStream.write(byt);
+				fopStream.flush();
+				fopStream.close();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
 			String product_day = req.getParameter("product-day");
-
+			
+			
 			Product product = new Product();
 			product.setCatalog_id(product_cate);
 			product.setName(product_name);
@@ -59,6 +82,6 @@ public class ProductAddController extends HttpServlet {
 			product.setCreated(product_day);
 			productService.insert(product);
 			resp.sendRedirect(req.getContextPath() + "/admin/product/list");
-
 	}
+	
 }

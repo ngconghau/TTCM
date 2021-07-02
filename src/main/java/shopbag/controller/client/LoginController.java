@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import shopbag.dao.impl.LoginDao;
-import shopbag.model.User;
+import shopbag.entities.User;
 
 /**
  * Servlet implementation class LoginController
@@ -40,7 +40,9 @@ public class LoginController extends HttpServlet {
 			User u = loginDao.checkLogin(username, password);
 			if(u != null) {
 				HttpSession session = request.getSession();
-                session.setAttribute("username", username);
+                session.setAttribute("username", u.getName());
+                session.setAttribute("email", u.getEmail());
+                session.setAttribute("phone", u.getPhone());
                 response.sendRedirect(request.getContextPath() + "/"); 
 			}
 			else {

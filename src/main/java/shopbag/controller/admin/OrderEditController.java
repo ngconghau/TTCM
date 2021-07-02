@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.Transactions;
+import shopbag.entities.Transactions;
 import shopbag.service.TransactionService;
 import shopbag.service.impl.TransactionServicesImpl;
 

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  
 import java.util.List;
 
-import shopbag.model.Admin;
+import shopbag.entities.Admin;
 import shopbag.service.AdminService;
 import shopbag.service.impl.AdminServicesImpl; 
  

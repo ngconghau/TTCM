@@ -2,7 +2,7 @@ package shopbag.dao;
 
 import java.util.List;
 
-import shopbag.model.Catalog;
+import shopbag.entities.Catalog;
 
 public interface CategoryDao {
 	void insert(Catalog category);

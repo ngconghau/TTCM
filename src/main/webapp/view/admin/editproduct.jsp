@@ -11,8 +11,8 @@
               <div class="card-body">
                 <div class="card-title">Sửa sản phẩm</div>
                 <hr>
-                <form method="post" action="${pageContext.request.contextPath}/admin/product/edit">
-                
+                <form method="post" action="${pageContext.request.contextPath}/admin/product/edit" >
+<!--                 enctype="multipart/form-data" -->
                  <div class="form-group">
                     <label for="input-1">Mã sản phẩm</label>
                     <input type="text" class="form-control" readonly="readonly" id="input-1" placeholder="Mã sản phẩm" name="product-sku" value="${product.id}">
@@ -77,6 +77,7 @@
                  <div class="form-group">
                     <label for="input-1">Ảnh đại diện</label>
                     <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}">
+<!-- 						<input type="file"  id="input-1" name="product-image"> -->
                   </div>
               
               

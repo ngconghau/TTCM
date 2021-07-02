@@ -9,14 +9,14 @@
             <div class="aa-header-top-area">
               <!-- start header top left -->
               <div class="aa-header-top-left">
-                <div class="cellphone hidden-xs">
-                  <p><span class="fas fa-home"></span>Website Bán Balo Hiệu</p>
-                </div>           
-                <!-- start cellphone -->
-          		 <div class="cellphone hidden-xs">
-                  <p><span class="fa fa-phone"></span>+84-983-350-550</p>
-                </div> 
-                <!-- / cellphone -->
+<!--                 <div class="cellphone hidden-xs"> -->
+<!--                   <p><span class="fas fa-home"></span>Website Bán Balo Hiệu</p> -->
+<!--                 </div>            -->
+<!--                 start cellphone -->
+<!--           		 <div class="cellphone hidden-xs"> -->
+<!--                   <p><span class="fa fa-phone"></span>+84-983-350-550</p> -->
+<!--                 </div>  -->
+<!--                 / cellphone -->
               </div>
               <!-- / header top left -->
               <div class="aa-header-top-right">

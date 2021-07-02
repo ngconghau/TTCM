@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import shopbag.dao.OrderedDao;
+import shopbag.entities.Ordered;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Ordered;
 
 public class OrderedDaoImpl implements OrderedDao{
 

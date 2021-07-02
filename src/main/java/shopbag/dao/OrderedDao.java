@@ -2,7 +2,7 @@ package shopbag.dao;
 
 import java.util.List;
 
-import shopbag.model.Ordered;
+import shopbag.entities.Ordered;
 
 public interface OrderedDao {
 	void insert(Ordered ordered); 

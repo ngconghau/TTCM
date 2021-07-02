@@ -18,8 +18,8 @@ import java.util.List;
 import java.sql.ResultSet;
 
 import shopbag.dao.CategoryDao;
+import shopbag.entities.Catalog;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Catalog;
 
 public class CategoryDaoImpl extends connectDB implements CategoryDao {
 

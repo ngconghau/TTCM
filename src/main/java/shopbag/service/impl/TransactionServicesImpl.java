@@ -4,7 +4,7 @@ import java.util.List;
 
 import shopbag.dao.TransactionDao;
 import shopbag.dao.impl.TransactionDaoImpl;
-import shopbag.model.Transactions;
+import shopbag.entities.Transactions;
 import shopbag.service.TransactionService;
 
 public class TransactionServicesImpl implements TransactionService{

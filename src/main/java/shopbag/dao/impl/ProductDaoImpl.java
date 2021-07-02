@@ -5,14 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
 import java.sql.ResultSet;
 
 import shopbag.dao.ProductDao;
+import shopbag.entities.Product;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Product;
 
 public class ProductDaoImpl extends connectDB implements ProductDao {
 
@@ -217,7 +218,13 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 		return productList;
 	}
 
-	
+//	public static void main(String[] args) {
+//		ProductDaoImpl tesDaoImpl= new ProductDaoImpl();
+//		List<Product> productList = tesDaoImpl.getProductById(1);
+//		for (Product product : productList) {
+//			System.out.println(product);
+//		}
+//	}
 	
 
 }

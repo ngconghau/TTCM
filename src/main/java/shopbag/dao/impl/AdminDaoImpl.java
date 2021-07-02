@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import shopbag.dao.AdminDao;
-import shopbag.jdbc.connectDB;
-import shopbag.model.Admin; 
+import shopbag.entities.Admin;
+import shopbag.jdbc.connectDB; 
  
 public class AdminDaoImpl extends connectDB implements AdminDao { 
  

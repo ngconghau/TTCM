@@ -4,7 +4,7 @@ import java.util.List;
 
 import shopbag.dao.ReviewDao;
 import shopbag.dao.impl.ReviewDaoImpl;
-import shopbag.model.Review;
+import shopbag.entities.Review;
 import shopbag.service.ReviewService;
 
 public class ReviewServicesImpl implements ReviewService {

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.Admin;
+import shopbag.entities.Admin;
 import shopbag.service.AdminService;
 import shopbag.service.impl.AdminServicesImpl;
 

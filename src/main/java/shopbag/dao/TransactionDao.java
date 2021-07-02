@@ -1,7 +1,7 @@
 package shopbag.dao;
 import java.util.List;
 
-import shopbag.model.Transactions;
+import shopbag.entities.Transactions;
 
 
 public interface TransactionDao {

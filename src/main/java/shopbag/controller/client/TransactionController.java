@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import shopbag.model.Item;
-import shopbag.model.Order;
-import shopbag.model.Ordered;
-import shopbag.model.Transactions;
+import shopbag.entities.Item;
+import shopbag.entities.Order;
+import shopbag.entities.Ordered;
+import shopbag.entities.Transactions;
 import shopbag.service.OrderedService;
 import shopbag.service.TransactionService;
 import shopbag.service.impl.OrderedServiceImpl;

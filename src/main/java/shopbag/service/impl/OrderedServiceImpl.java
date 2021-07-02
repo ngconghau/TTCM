@@ -4,7 +4,7 @@ import java.util.List;
 
 import shopbag.dao.OrderedDao;
 import shopbag.dao.impl.OrderedDaoImpl;
-import shopbag.model.Ordered;
+import shopbag.entities.Ordered;
 import shopbag.service.OrderedService;
 
 public class OrderedServiceImpl implements OrderedService{

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.util.List;
 
-import shopbag.model.User;
+import shopbag.entities.User;
 import shopbag.service.UserService;
 import shopbag.service.impl.UserServicesImpl;
 

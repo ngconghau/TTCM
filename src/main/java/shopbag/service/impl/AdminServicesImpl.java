@@ -4,7 +4,7 @@ import java.util.List;
 
 import shopbag.dao.AdminDao;
 import shopbag.dao.impl.AdminDaoImpl;
-import shopbag.model.Admin;
+import shopbag.entities.Admin;
 import shopbag.service.AdminService; 
  
 public class AdminServicesImpl implements AdminService { 

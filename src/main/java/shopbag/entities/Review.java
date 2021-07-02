@@ -1,4 +1,4 @@
-package shopbag.model;
+package shopbag.entities;
 
 public class Review {
 	private String id;

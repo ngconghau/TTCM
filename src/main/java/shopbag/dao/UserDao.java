@@ -2,7 +2,7 @@ package shopbag.dao;
 
 import java.util.List;
 
-import shopbag.model.User;
+import shopbag.entities.User;
 
 public interface UserDao {
 	

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.User;
+import shopbag.entities.User;
 import shopbag.service.UserService;
 import shopbag.service.impl.UserServicesImpl;
 

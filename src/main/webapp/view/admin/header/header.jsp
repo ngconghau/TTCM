@@ -68,7 +68,7 @@
 												alt="user avatar">
 										</div>
 										<div class="media-body">
-											<h6 class="mt-2 user-title">Webnongsan</h6>
+											<h6 class="mt-2 user-title">Admin</h6>
 											<b> Admin: <%=session.getAttribute("admin-username")%></b>
 										</div>
 									</div>

@@ -2,7 +2,7 @@ package shopbag.service;
 
 import java.util.List;
 
-import shopbag.model.User;
+import shopbag.entities.User;
 public interface UserService {
 	
 void insert(User user);

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import shopbag.model.User;
+import shopbag.entities.User;
 
 public class RegisterDao {
 	Connection con;

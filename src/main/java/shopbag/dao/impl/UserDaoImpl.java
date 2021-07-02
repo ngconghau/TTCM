@@ -10,8 +10,8 @@ import java.util.List;
 import java.sql.ResultSet;
 
 import shopbag.dao.UserDao;
+import shopbag.entities.User;
 import shopbag.jdbc.connectDB;
-import shopbag.model.User;
 
 public class UserDaoImpl extends connectDB implements UserDao {
 	

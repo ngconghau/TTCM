@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import shopbag.entities.Admin;
 import shopbag.jdbc.connectDB;
-import shopbag.model.Admin;
 
 
 

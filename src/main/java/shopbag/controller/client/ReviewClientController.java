@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import shopbag.model.Review;
+import shopbag.entities.Review;
 import shopbag.service.ReviewService;
 import shopbag.service.impl.ReviewServicesImpl;
 
